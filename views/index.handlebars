@@ -8,6 +8,8 @@
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="/css/introHCI.css" rel="stylesheet">
+    {{> facebook}}
+    <script src="/js/facebook.js"></script>
 	<!-- this is a comment in HTML -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -29,7 +31,11 @@
 		<div class="jumbotron">
 			<h1 id="name">Scott Klemmer</h1>
 			<p>human-computer interaction &middot; social computing &middot; crowdsourcing</p>
-			<p class="facebookLogin">Please login through Facebook</p>
+			<p class="facebookLogin">
+                Please login through Facebook
+                <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+                </fb:login-button>
+            </p>
 		</div>
 
 		<div id="facebookPhoto" class="profile">
@@ -48,7 +54,7 @@
 					<img src="images/{{image}}" alt="Lorem Pixel image" class="img">
 					<p>{{name}}</p>
 				</a>
-				<div class="details"></div>
+				<div class="details">moo</div>
 			</div>
 		</div>
 		{{/each}}
